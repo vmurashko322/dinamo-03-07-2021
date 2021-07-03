@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>  {{ object_list.0.title }}  </p>
+{% for i in object_list %}
+    <div>
+        <strong>{{ i.player.name }}</strong>
+    </div>
+{% endfor %}
+<div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="name_players">
+        <button>Узнать команду игрока</button>
+    </form>
+<div>
+    <p>{{ request.POST.name_players }}</p>
+    <p></p>
+</div>
+</div>
+</body>
+</html>
