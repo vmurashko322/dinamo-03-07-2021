@@ -17,10 +17,12 @@
         <input type="text" name="name_players">
         <button>Узнать команду игрока</button>
     </form>
+</div>
 <div>
     <p>{{ request.POST.name_players }}</p>
-    <p></p>
-</div>
+    {% for i in teams %}
+        <p>{{ i.title }}</p>
+    {% endfor %}
 </div>
 </body>
 </html>

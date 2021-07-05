@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('main.urls')),
     path('',include('dinamo.urls')),
+    path('api1/',include('dinamo.urls')),
+
 ]
